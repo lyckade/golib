@@ -8,6 +8,16 @@ import (
 	"os"
 )
 
+const (
+	TRACE = iota
+	DEBUG
+	INFO
+	WARN
+	ERROR
+	CRITICAL
+	FATAL
+)
+
 //NewFileLogger returns a simple Logger which creates a
 //Logger which writes into a log file
 func NewFileLogger(fileName string, prefix string) *log.Logger {
